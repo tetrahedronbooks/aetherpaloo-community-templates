@@ -1,0 +1,39 @@
+name: Template submission
+description: Submit an Aetherpaloo design for review
+title: "Template submission: "
+labels: ["template-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for sharing a design. Do not attach manuscripts, book metadata, covers, or copyrighted images.
+  - type: input
+    id: creator
+    attributes:
+      label: Creator name
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: Template license
+      description: CC BY 4.0 is the default.
+      value: CC-BY-4.0
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Template file and preview
+      description: Drag the .aethertemplate.json file and one preview screenshot here.
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Confirmation
+      options:
+        - label: This submission contains no manuscript text, book metadata, cover art, or embedded images.
+          required: true
+        - label: I have the right to share the preview and template under the stated license.
+          required: true
