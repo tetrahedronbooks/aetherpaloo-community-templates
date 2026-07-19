@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-19T00:00:00.000Z",
+  "templates": [
+    {
+      "id": "classic-fiction",
+      "name": "Classic Fiction",
+      "creator": "Tetrahedron Books",
+      "license": "CC0-1.0",
+      "file": "templates/classic-fiction.aethertemplate.json",
+      "category": "fiction"
+    }
+  ]
+}
