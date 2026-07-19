@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tetrahedronbooks/aetherpaloo-community-templates/schema/template.schema.json",
+  "title": "Aetherpaloo Community Template",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "schemaVersion",
+    "name",
+    "creator",
+    "license",
+    "chapterDesign",
+    "bodyTypography"
+  ],
+  "properties": {
+    "format": {
+      "const": "aetherpaloo-template"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "creator": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "license": {
+      "type": "string",
+      "enum": [
+        "CC-BY-4.0",
+        "CC0-1.0",
+        "MIT",
+        "private"
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "aetherpalooProjectVersion": {
+          "type": "integer",
+          "minimum": 12
+        }
+      }
+    },
+    "chapterDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "numStyle",
+        "numPos",
+        "font",
+        "align",
+        "titleColor",
+        "numColor",
+        "rule",
+        "ruleColor",
+        "rulePos",
+        "spacing"
+      ],
+      "properties": {
+        "numStyle": {
+          "enum": [
+            "none",
+            "numeric",
+            "word",
+            "roman",
+            "label-only"
+          ]
+        },
+        "numPos": {
+          "enum": [
+            "above",
+            "below"
+          ]
+        },
+        "font": {
+          "enum": [
+            "bebas",
+            "georgia",
+            "garamond",
+            "trebuchet",
+            "courier"
+          ]
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "titleColor": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "numColor": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "rule": {
+          "enum": [
+            "none",
+            "line",
+            "dots",
+            "stars",
+            "dashes"
+          ]
+        },
+        "ruleColor": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "rulePos": {
+          "enum": [
+            "above",
+            "below"
+          ]
+        },
+        "spacing": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 4
+        }
+      }
+    },
+    "bodyTypography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "font",
+        "size"
+      ],
+      "properties": {
+        "font": {
+          "enum": [
+            "georgia",
+            "garamond",
+            "times"
+          ]
+        },
+        "size": {
+          "type": "number",
+          "minimum": 8,
+          "maximum": 24
+        }
+      }
+    }
+  }
+}
