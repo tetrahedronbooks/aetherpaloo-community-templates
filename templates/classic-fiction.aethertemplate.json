@@ -1,0 +1,27 @@
+{
+  "format": "aetherpaloo-template",
+  "schemaVersion": 1,
+  "name": "Classic Fiction",
+  "creator": "Tetrahedron Books",
+  "license": "CC0-1.0",
+  "createdAt": "2026-07-19T00:00:00.000Z",
+  "compatibility": {
+    "aetherpalooProjectVersion": 12
+  },
+  "chapterDesign": {
+    "numStyle": "word",
+    "numPos": "above",
+    "font": "garamond",
+    "align": "center",
+    "titleColor": "#111111",
+    "numColor": "#555555",
+    "rule": "none",
+    "ruleColor": "#1D86EF",
+    "rulePos": "below",
+    "spacing": 2
+  },
+  "bodyTypography": {
+    "font": "garamond",
+    "size": 11.5
+  }
+}
